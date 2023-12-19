@@ -1,0 +1,137 @@
+:root {
+    --bg-page: #d1d1d1;
+    --hero-title: #fff;
+    --hero-subtitle: #e2e2e2;
+    --shadow: #2d2d2d;
+    --bt-text: #e2e2e2;
+    --bt-bg: #de4f4f;
+    --bt-hover-bg: #b04141;
+    --sec-bt-text: #de4f4f;
+    --sec-bt-hover: #7e3030;
+    --sec-bt-border: #de4f4f;
+    --sec-bt-bg: #e2e2e2;
+}
+
+/* RESET */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-page);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HERO */
+
+.hero {
+    /* height: 300px; */
+    width: auto;
+    background: linear-gradient(to top, #88888890, #ffffff5e), url('../img/mountains.JPG') no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 150px;
+}
+
+.hero-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.hero-text-container,
+.hero-button-container,
+#hero-title,
+#hero-subtitle {
+    background-color: inherit;
+    text-align: center;
+}
+
+#hero-title {
+    font-size: 54px;
+    color: var(--hero-title);
+    text-shadow: var(--shadow) 2px 2px 2px;
+}
+
+#hero-subtitle {
+    font-size: 18px;
+    color: var(--hero-subtitle);
+    text-shadow: var(--shadow) 1px 1px 1px;
+    line-height: 30px;
+}
+
+.hero-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+.hero-button,
+.hero-button-secundary {
+    width: 90px;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 6px;
+    transition-duration: .3s;
+}
+
+.hero-button {
+    background-color: var(--bt-bg);
+    color: var(--bt-text);
+    padding: 15px 25px;
+    border-radius: 6px;
+}
+
+.hero-button-secundary {
+    background-color: var(--sec-bt-bg);
+    color: var(--sec-bt-text);
+    border: var(--sec-bt-border) solid 1px;
+}
+
+.hero-button:hover {
+    background-color: var(--bt-hover-bg);
+}
+
+.hero-button-secundary:hover {
+    color: var(--sec-bt-hover);
+    border-color: var(--sec-bt-hover);
+}
+
+/* RESPONSIVIDADE */
+
+/* for small laptops - 1100px */
+@media (max-width: 1100px) {
+    .hero {
+        padding: 150px 140px;
+    }
+}
+
+/* for tablets - 900px */
+@media (max-width: 900px) {
+    .hero {
+        padding: 150px 90px;
+    }
+}
+
+/* for smartphones - 576px */
+@media (max-width: 576px) {
+    body main .hero {
+        height: calc(100vh - 100px);
+        padding: 50px 45px;
+        justify-content: space-evenly;
+        gap: 70px;
+    }
+
+    #hero-title {
+        font-size: 42px;
+    }
+
+    #hero-subtitle {
+        font-size: 16px;
+    }
+}
