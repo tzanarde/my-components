@@ -8,18 +8,22 @@
 </head>
 <body>
     <header>
-        <div id="logo-container">
-            <img src="../img/logo.png" alt="Logo do Site" class="site-logo">
-            <h1 class="site-title">Título do Site</h1>
-        </div>
         <nav>
-            <ul id="main-menu">
-                <li class="menu-item">Home</li>
-                <li class="menu-item">Blog</li>
-                <li class="menu-item">Sobre</li>
-                <li class="menu-item">Contato</li>
-                <li class="menu-button">Login</li>
-            </ul>
+            <div class="logo-container">
+                <img src="../img/logo.png" alt="Logo do Site" class="site-logo">
+                <h1 class="site-title">Título do Site</h1>
+            </div>
+            <div class="menu">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="main-menu">
+                    <li class="menu-item">Home</li>
+                    <li class="menu-item">Blog</li>
+                    <li class="menu-item">Sobre</li>
+                    <li class="menu-item">Contato</li>
+                </ul>
+                <a href="#" class="menu-button">Login</a>
+            </div>
         </nav>
     </header>
 </body>
